@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>位移基本使用</title>
+    <style>
+      .father {
+        width: 500px;
+        height: 300px;
+        margin: 100px auto;
+        border: 1px solid #000;
+      }
+
+      .son {
+        width: 300px;
+        height: 100px;
+        background-color: pink;
+        transition: all 0.5s;
+        /* 过渡效果 */
+      }
+
+      /* 鼠标移入 父盒子 ，son 改变位置, 鼠标移除, 回归原位置 */
+      .father:hover .son {
+        /* transform  简写：tf   */
+        transform: translate(50px, 100px);
+        /* 属性一样，后面的属性的样式 会覆盖前面的 样式  */
+        transform: translate(-50px, -100px);
+        /* 百分比  : 参考盒子 自身尺寸计算结果 */
+        transform: translate(-50%, -100%);
+
+        /* 技巧 */
+        /* translate ( ) 如果只给出一个值 , 表示 x 轴 方向移动距离 */
+        transform: translate(200px);
+        /* 单独 设置 某个方向的移动距离：（ translateX( ) &  translateY( ) ） */
+        transform: translateX(100px);
+        transform: translateY(100px);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="father">
+      <div class="son"></div>
+    </div>
+  </body>
+</html>
