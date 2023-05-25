@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>双开门</title>
+    <style>
+      .father {
+        margin: 100px auto;
+        width: 600px;
+        height: 400px;
+        background-color: pink;
+        display: flex;
+        overflow: hidden; /* 超出 父级范围的 隐藏 */
+      }
+      .son1 {
+        width: 300px;
+        height: 400px;
+        background-color: skyblue;
+      }
+      .son2 {
+        width: 300px;
+        height: 400px;
+        background-color: yellowgreen;
+      }
+
+      .father:hover .son1 {
+        transform: translateX(-100%);
+        transition: all 0.5s;
+      }
+      .father:hover .son2 {
+        transform: translateX(+100%);
+        transition: all 0.5s;
+      }
+    </style>
+  </head>
+  <body>
+    <h3 style="text-align: center">亲自写 html标签 元素</h3>
+    <div class="father">
+      <div class="son1"></div>
+      <div class="son2"></div>
+    </div>
+  </body>
+</html>

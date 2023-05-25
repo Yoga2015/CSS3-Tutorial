@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>旋转效果</title>
+    <style>
+      img {
+        width: 250px;
+        transition: all 2s; /* 过渡效果 */
+      }
+      img:hover {
+        transform: rotate(180deg); /* 顺时针 旋转 180度 */
+        transform: rotate(360deg); /* 顺时针 旋转 360度 */
+        transform: rotate(-180deg); /* 逆时针 旋转 180度 */
+        transform: rotate(-360deg); /* 逆时针 旋转 360度 */
+      }
+    </style>
+  </head>
+  <body>
+    <img src="../images/rotate.png" alt="" />
+  </body>
+</html>

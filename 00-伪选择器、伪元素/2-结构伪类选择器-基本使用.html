@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>结构伪类选择器 - 基本使用</title>
+    <style>
+      /* 查找第一个li标签 */
+      li:first-child {
+        background-color: pink;
+      }
+
+      /* 查找最后一个li标签 */
+      li:last-child {
+        background-color: aqua;
+      }
+
+      /* 查找 第5个 li 标签 */
+      li:nth-child(5) {
+        background-color: green;
+      }
+
+      /* 偶数标签 */
+      li:nth-child(2n) {
+        background-color: yellow;
+      }
+
+      /* 奇数标签 */
+      li:nth-child(2n-1) {
+        background-color: skyblue;
+      }
+
+      /* 会覆盖上一个样式 */
+      li:nth-child(2n + 1) {
+        background-color: red;
+      }
+
+      /* 找到3的倍数的标签 */
+      li:nth-child(3n) {
+        background-color: rgb(119, 0, 255);
+      }
+
+      /* 找到第5个以后的标签 ， n 从 0 开始 */
+      li:nth-child(n + 5) {
+        background-color: fuchsia;
+      }
+      /* 找到第5个以前的标签 */
+      li:nth-child(-n + 5) {
+        background-color: goldenrod;
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li>li 1</li>
+      <li>li 2</li>
+      <li>li 3</li>
+      <li>li 4</li>
+      <li>li 5</li>
+      <li>li 6</li>
+      <li>li 7</li>
+      <li>li 8</li>
+      <li>li 9</li>
+      <li>li 10</li>
+    </ul>
+  </body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>缩放</title>
+    <style>
+      .box {
+        width: 300px;
+        height: 210px;
+        margin: 100px auto;
+        background-color: pink;
+      }
+
+      .box img {
+        /* 将 图片尺寸大小 设置成 父级容器的尺寸大小 */
+        width: 100%;
+        transition: all 0.5s;
+      }
+
+      .box:hover img {
+        /* 缩放效果不够好看 */
+        /* width: 400px; */
+        /* height: 300px; */
+
+        /* transform: scale(缩放倍数); */
+        transform: scale(1); /* 无缩放 */
+        transform: scale(1.5); /* 放大1.5倍数 */
+        transform: scale(0.6); /* 缩小0.6倍数 */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <img src="../photo/缩放.png" alt="" />
+    </div>
+  </body>
+</html>

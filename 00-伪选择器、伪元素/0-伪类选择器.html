@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>伪类选择器</title>
+    <style>
+      /* 任何标签，都可以设置 鼠标悬停的状态 */
+      a:hover {
+        color: red;
+        font-size: 30px;
+      }
+      .box {
+        width: 200px;
+        height: 200px;
+        background-color: skyblue;
+      }
+      /* 伪类选择器:hover ： 鼠标悬停 变背景色 */
+      .box:hover {
+        background-color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="">a链接</a><hr />
+
+    <div class="box">我是div</div>
+  </body>
+</html>

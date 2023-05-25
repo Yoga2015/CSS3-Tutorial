@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>多重转换</title>
+    <style>
+      .box {
+        width: 800px;
+        height: 200px;
+        border: 1px solid black;
+      }
+      img {
+        width: 200px;
+        transition: all 5s;
+      }
+      .box:hover img {
+        transform: translate(600px) rotate(720deg);
+
+        /* 不行 : 旋转会改变坐标轴向，先旋转改变了坐标轴向，位移方向会受影响。
+        多重转换，如果涉及到旋转往最后书写。 */
+        transform: rotate(7200deg) translate(600px);
+
+        /* 一个标签 ，如果有相同的 css 属性 会发生 层叠，会发生覆盖，后面的覆盖前面的。 */
+        transform: translate(600px);
+        transform: rotate(720deg); /* 原地旋转 720度 */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <img src="../images/tyre1.png" alt="" />
+    </div>
+  </body>
+</html>

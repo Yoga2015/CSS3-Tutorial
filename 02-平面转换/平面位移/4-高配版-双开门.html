@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>双开门</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      .box {
+        width: 1366px;
+        height: 600px;
+        margin: 100px auto;
+        background: url("./images/bg.jpg");
+        overflow: hidden; /* 超出 父级范围的 隐藏 */
+      }
+
+      /* box 的前后 创建一个 虚拟的盒子 */
+      /* 左右相同的样式  ，伪元素：默认 是 行内显示模式*/
+      .box::before,
+      .box::after {
+        float: left;
+        content: "";
+        width: 50%;
+        height: 600px;
+        background: url("./images/fm.jpg");
+        transition: all 0.5s; /* 搞清楚 是谁 在移动 */
+      }
+
+      /* 单独控制 after 的背景图位置 */
+      .box::after {
+        background-position: right 0;
+      }
+
+      /* 鼠标移入 box , before 向左移动 -100% */
+      .box:hover::before {
+        transform: translate(
+          -100%
+        ); /* translate 如果只给 一个值 ，表示 x轴方向 移动距离 */
+      }
+
+      /* 鼠标移入 box , after  向右移动 +100% */
+      .box:hover::after {
+        transform: translateX(+100%); /* 单独 设置 某个方向的移动距离 */
+      }  
+    </style>
+  </head>
+  <body>
+    <div class="box"></div>
+  </body>
+</html>
