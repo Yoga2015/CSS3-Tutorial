@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>华为新闻</title>
+    <link rel="stylesheet" href="./iconfont/iconfont.css" />
+    <style>
+      .box {
+        width: 1110px;
+        height: 212px;
+        margin: 50px auto;
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .box1,
+      .box2,
+      .box3 {
+        position: relative;
+        overflow: hidden; /* 超出 父级 隐藏 */
+      }
+
+      .box1 img,
+      .box2 img,
+      .box3 img {
+        width: 350px; /* 直接修改图片的大小 */
+      }
+
+      .box1:hover img,
+      .box2:hover img,
+      .box3:hover img {
+        transform: scale(1.2); /*  放大1.2倍数 */
+        transition: all 0.5s;
+      }
+
+      .box1 .title,
+      .box2 .title,
+      .box3 .title {
+        position: absolute;
+        left: 15px;
+        bottom: 10px;
+        z-index: 2;
+        width: 260px;
+        color: #fff;
+        font-size: 18px;
+        font-weight: 700;
+        transform: translateY(30px);
+      }
+
+      .box1:hover .title,
+      .box2:hover .title,
+      .box3:hover .title {
+        transform: translateY(0);
+      }
+
+      /* 1、准备盒子，定位压在图片的上面 */
+      /* 2、hover效果：显示渐变背景 */
+      .box1 .mask,
+      .box2 .mask,
+      .box3 .mask {
+        position: absolute;
+
+        /* 渐变背景：书写盒子 ，控制位置 ，默认透明度 为 0 ， 看不见 */
+        bottom: 0px;
+        width: 350px;
+        height: 212px;
+        background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+        opacity: 0; /* 设置 mask 的透明度 为 0 ，默认看不见 遮挡层*/
+        transition: all 0.5s; /* 过渡效果，让 遮挡层 遮挡时有缓动的动画效果 */
+      }
+
+      /* 鼠标移入 box , mask 发生变化 , 让 mask 的透明度 为 1*/
+      .box1:hover .mask,
+      .box2:hover .mask,
+      .box3:hover .mask {
+        opacity: 1;
+      }
+
+      .sort,
+      .details {
+        font-size: 12px;
+        padding: 5px 0px;
+        font-weight: 540;
+        display: flex;
+      }
+      .details {
+        padding-top: 20px;
+      }
+      .icon-arrow-right {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <div class="box1">
+        <!-- 图片 -->
+        <img src="./images/product.jpeg" alt="" />
+
+        <!-- 文字 -->
+        <div class="title">
+          <div class="sort">产品</div>
+          <div>OceanStor Pacific 海量存储 斩获2021 Interop金奖</div>
+          <div class="details">
+            了解更多<span class="iconfont icon-arrow-right"></span>
+          </div>
+        </div>
+
+        <!-- 渐变背景： .mask 表示遮挡层 -->
+        <div class="mask"></div>
+      </div>
+
+      <div class="box2">
+        <img src="./images/huawei1.jpeg" alt="" />
+
+        <!-- 可以在这里 添加 渐变背景的盒子 也行 1 -->
+
+        <div class="title">
+          <div class="sort">行业洞察</div>
+          <div>迈向智能世界2030</div>
+          <div class="details">
+            了解更多<span class="iconfont icon-arrow-right"></span>
+          </div>
+        </div>
+
+        <!-- 也可以在这里 添加 渐变背景的盒子 也行 2 -->
+        <!-- .mask 表示遮挡层 -->
+        <div class="mask"></div>
+      </div>
+
+      <div class="box3">
+        <img src="./images/huawei2.jpeg" alt="" />
+
+        <!-- 可以在这里 添加 渐变背景的盒子 也行 1 -->
+
+        <div class="title">
+          <div class="sort">《ICT新视界》刊首语</div>
+          <div>笃行致远，共建具有获得感、幸福感、安全感的智慧城市</div>
+          <div class="details">
+            了解更多<span class="iconfont icon-arrow-right"></span>
+          </div>
+        </div>
+
+        <!-- 也可以在这里 添加 渐变背景的盒子 也行 2 -->
+        <!-- .mask 表示遮挡层 -->
+        <div class="mask"></div>
+      </div>
+    </div>
+  </body>
+</html>

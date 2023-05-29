@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>渐变--华为产品展示</title>
+    <style>
+      .box {
+        position: relative;
+        width: 300px;
+        height: 212px;
+      }
+
+      .box img {
+        width: 300px; /* 直接修改图片的大小 */
+      }
+
+      .box .title {
+        position: absolute;
+        left: 15px;
+        bottom: 20px;
+        z-index: 2;
+        width: 260px;
+        color: #fff;
+        font-size: 20px;
+        font-weight: 700;
+      }
+
+      /* 1、准备盒子，定位压在图片的上面 */
+      /* 2、hover效果：显示渐变背景 */
+      .box .mask {
+        position: absolute;
+        left: 0;
+        top: 0;
+
+        width: 300px;
+        height: 212px;
+        background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+        opacity: 0; /* 设置 mask 的透明度 为 0 ，默认看不见 遮挡层*/
+        transition: all 0.5s; /* 过渡效果，让 遮挡层 遮挡时有缓动的动画效果 */
+      }
+
+      /* 鼠标移入 box , mask 发生变化 , 让 mask 的透明度 为 1*/
+      .box:hover .mask {
+        opacity: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <img src="./images/product.jpeg" alt="" />
+
+      <!-- 可以在这里 添加 渐变背景的盒子 也行 1 -->
+
+      <div class="title">OceanStor Pacific 海量存储斩获2023 Interop奖</div>
+
+      <!-- 也可以在这里 添加 渐变背景的盒子 也行 2 -->
+
+      <!-- .mask 表示遮挡层 -->
+      <div class="mask"></div>
+    </div>
+  </body>
+</html>
