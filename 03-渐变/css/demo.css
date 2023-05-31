@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    /* 设置元素的宽度和高度包括其边框和内边距的宽度，而不是仅包括内容的宽度和高度。*/
     box-sizing: border-box;
 }
 
@@ -15,6 +16,7 @@ a {
 img {
     width: 100%;
     vertical-align: middle;
+    /* 用于 将元素 垂直居中*/
 }
 
 .box {
@@ -89,8 +91,11 @@ img {
     top: 0;
     width: 350px;
     height: 247px;
-    background-image: linear-gradient(transparent,
-            rgba(0, 0, 0, .6));
+    /* 渐变背景 */
+    background-image: linear-gradient(
+        transparent,
+        rgba(0, 0, 0, .6)
+    );
     opacity: 0;
     transition: all .5s;
 }
@@ -102,15 +107,13 @@ img {
 }
 
 .box li:hover .pic img {
-    transform: scale(1.2);
-    /* 缩放 放大 1.2倍 */
+    transform: scale(1.2);  /* 缩放 放大 1.2倍 */
 }
 
 
 /* 2.2 渐变背景显示 */
 .box li:hover .mask {
-    opacity: 1;
-    /* 透明度为 1，即完全显示 */
+    opacity: 1;  /* 透明度为 1，即完全显示 */
 }
 
 /* 2.3 文字向上移动 */

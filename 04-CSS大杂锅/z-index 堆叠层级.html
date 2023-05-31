@@ -13,19 +13,18 @@
       }
       .box1 {
         background-color: pink;
-        /* z-index  取值 是 整数，默认是 0 , 取值越大，显示顺序 越靠上 */
-        z-index: 5;
+        z-index: 5; /* z-index 取值 是 整数，默认是 0 , 取值越大，显示顺序 越靠上 */
       }
       .box2 {
         background-color: yellow;
-        /* 设置下面的样式后，可以发现后来者居上 */
         left: 100px;
         top: 100px;
-        z-index: 2;
+        z-index: 2; /* 只有 设置 z-index 的值 为 5 以上的， 才能在最上层显示 */
       }
     </style>
   </head>
   <body>
+    默认情况下 ，未设置 css样式 时， box2 显示在  box1 的 上层
     <div class="box1">box1</div>
     <div class="box2">box2</div>
   </body>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>相对定位</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      /* 1、改变位置的参照物 是 自己原来的位置
+         2、还没脱离 标准流 ，还是 占位 的（我自己挪走了，别人也不能来）
+         3、标签 显示模式特点  不变  ，（是 块级，就还是块级）
+         但 相对定位 一般不会单独使用！！
+      */
+      div {
+        position: relative;
+        top: 100px;
+        left: 200px;
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      前端项目应该如何规划css结构便于重构和维护？
+      规划css的有个影响因素，就是网站的设计思路，
+      如果网站是有一个整个的设计风格的话，规划的时候可以将 模块的粒度 适度放大。
+      简而言之，就是重构和维护，所以一定要用预处理工具，直接写CSS的话毛维护性都没有。
+      接下来就是拆，能拆就拆，能拆多细就拆多细。roshanca的做法就不错。
+    </p>
+    <p>
+      结构拆分
+      基础框架：包含重置样式、栅格、css3动画模块，还是可以加上矢量图标库（iconfont）、辅助类
+      通用样式库：基本的复用模块，如button、form、table等，这个设计的时候要注意复用性和维护性
+      业务样式：包含网站各页面之间的网站特有的样式，如导航、列表页、评论等
+      解决方案：可以归纳一下常用的css问题，如兼容多浏览器的高度不固定的垂直水平居中、png透明图片支持等。。
+    </p>
+    <div><img src="../02-平面转换/images/hero.jpeg" alt="" /></div>
+
+    <p>
+      代码规范 命名空间+模块化+语义命名，可以参考Amaze UI HTML/CSS 规范
+      兼容性列表：这个视业务需求而定了，如果逼格高一点，如ie8+基本和hack说再见了
+      javascript组件：复杂的交互组件都是和javascript配合，建议公司内部有统一的规范，
+      如果没有，可以参考业内的bootstrap、aralejs都可以
+    </p>
+  </body>
+</html>
