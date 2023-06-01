@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS精灵图2</title>
+    <style>
+      /* 1、创建 盒子  ，盒子尺寸 与 小图 尺寸 相同
+         2、设置 盒子 背景图 为 精灵图
+         3、添加 background-position 属性， 改变 背景图 位置
+            3.1 使用 PxCook 测量 小图片 左上角坐标
+            3.2 取 负数 坐标为 background-position 属性值 （向 左上 移动图片位置） */
+      div {
+        display: inline-block;
+        /* width: 112px;
+        height: 113px;
+        background-color: pink; */
+
+        background-image: url(./images/abcd.png);
+        background-repeat: no-repeat; /* 背景图不能重复*/
+      }
+
+      #div1 {
+        width: 113px;
+        height: 116px;
+        background-position: 0 0;
+      }
+
+      #div2 {
+        width: 113px;
+        height: 116px;
+        background-position: -252px -272px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="div1"></div>
+    <div id="div2"></div>
+  </body>
+</html>

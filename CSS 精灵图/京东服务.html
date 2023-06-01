@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>京东服务</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      li {
+        list-style: none;
+      }
+      .service {
+        margin: 100px auto;
+        width: 1190px;
+        height: 42px;
+        /* background-color: pink; */
+      }
+      .service ul {
+        display: flex;
+      }
+      .service li {
+        width: 297px;
+        height: 42px;
+        background-color: #f5f5f5;
+        padding-left: 40px;
+        display: flex;
+      }
+      .service li h5 {
+        width: 36px;
+        height: 42px;
+        /* background-color: pink; */
+        /* background-image: url(./images/jingdong.png); 用复合属性方式 */
+        background: url(./images/jingdong.png) 0 -192px;
+        margin-right: 10px;
+      }
+      .service li:nth-child(2) h5 {
+        width: 36px;
+        height: 42px;
+        background-position: -41px -192px; /* 看精灵图 垂直 可以不变*/
+      }
+      .service li:nth-child(3) h5 {
+        width: 36px;
+        height: 42px;
+        background-position: -82px -192px; /* 看精灵图 垂直 可以不变*/
+      }
+      .service li:nth-child(4) h5 {
+        width: 36px;
+        height: 42px;
+        background-position: -123px -192px; 
+      }
+      .service li p {
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 42px;
+        color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="service">
+      <ul>
+        <li>
+          <h5></h5>
+          <p>品类齐全，轻松购物</p>
+        </li>
+        <li>
+          <h5></h5>
+          <p>多仓直发，极速配送</p>
+        </li>
+        <li>
+          <h5></h5>
+          <p>正品行货，精致服务</p>
+        </li>
+        <li>
+          <h5></h5>
+          <p>天天低价，畅选无忧</p>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>

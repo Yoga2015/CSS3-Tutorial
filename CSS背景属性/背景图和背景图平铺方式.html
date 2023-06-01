@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>背景图、背景图平铺方式</title>
+  <style>
+    .box {
+      width: 500px;
+      height: 500px;
+      border: 3px solid red;
+
+      /* 背景图 默认是 平铺（复制）的效果 */
+      background-image: url(./cat.png);
+
+      /* 不平铺：盒子的左上角 显示一张背景图 */
+      background-repeat: no-repeat;
+      background-repeat: repeat-x;
+      background-repeat: repeat-y;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box">div标签</div>
+</body>
+
+</html>
