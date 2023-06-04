@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>盒子模型-圆角</title>
+  <style>
+    div {
+      margin: 50px auto;
+      width: 200px;
+      height: 200px;
+      background-color: orange;
+
+      /* 一值 : 四角 都是 50px 半径圆角 */
+      border-radius: 50px;
+
+      /* 记忆 : 从 左上角 顺时针 赋值，没有赋值的角 与 对角 取值相同 */
+
+      /* 四值 : 左上  右上  右下  左下 */
+      border-radius: 10px 30px 60px 80px;
+
+      /* 三值 ： 左上  右下+左下 右下 */
+      border-radius: 10px 30px 80px;
+
+      /* 二值 ： 左上+右下   右上+左下 */
+      border-radius: 10px 80px;
+    }
+  </style>
+</head>
+
+<body>
+  <div></div>
+</body>
+
+</html>

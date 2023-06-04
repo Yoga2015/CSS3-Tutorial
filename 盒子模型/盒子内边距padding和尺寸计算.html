@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>盒子 的 内边距padding 和 尺寸计算</title>
+  <style>
+    div {
+      background-color: pink;
+      border: 1px solid yellowgreen;
+      width: 200px;
+      height: 200px;
+
+      /* 手动减法 ,根据 border / padding 的尺寸 来计算 大小，太麻烦了！ */
+      /* width: 160px;
+      height: 160px; */
+
+      /* 加 内边距 都会撑大 盒子本身*/
+      padding: 20px;
+
+      /* 内减模式 : 不需要手动减法，就算加了 padding 和 border 也不会撑大 盒子本身 */
+      box-sizing: border-box;
+    }
+  </style>
+</head>
+
+<body>
+  <div>div标签</div>
+</body>
+
+</html>

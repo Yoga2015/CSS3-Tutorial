@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>外边距问题-塌陷现象</title>
+  <style>
+    .father {
+      width: 400px;
+      height: 400px;
+      background-color: pink;
+
+      /* 1、 取消子级 margin , 父级 设置 padding  */
+      /*     但是 加了 padding 会撑大 father盒子本身 尺寸*/
+      /* padding-top: 50px; */
+      /* box-sizing: border-box; */
+
+      /* 2、父级设置 overflow：hidden */
+      overflow: hidden;
+
+      /* 3、父级设置 border-top ，但是又会多了 1px边框      一般不用 */
+      /* border-top: 1px solid black; */
+    }
+
+    .son {
+      width: 200px;
+      height: 200px;
+      background-color: skyblue;
+
+      /* 父子级 的标签，子级 的 添加 上外边距 会产生 塌陷问题  ？？ ，上面有三个解决方案*/
+      /* 但是 如果 父级元素中 有内容 就不会塌陷了 */
+      margin-top: 50px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="father">
+    <div class="son">son盒子</div>
+  </div>
+</body>
+
+</html>

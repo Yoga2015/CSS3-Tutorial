@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>清除默认样式</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      /* 内减模式 , 避免了 给元素加了内边距后，会把 元素本身 撑大  */
+      box-sizing: border-box;
+    }
+
+    
+    li {
+      list-style: none;  /* 去掉 列表 的 项目符号 */
+    }
+
+    a {
+      text-decoration: none;   /* 去掉 a 标签 的 下划线 */
+    }
+  </style>
+</head>
+
+<body>
+  <h1>标题</h1>
+  <p>ppp</p>
+  <ul>
+    <li>li 标签</li>
+  </ul>
+  <a href="#">a 标签</a>
+  
+</body>
+
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>显示模式 和 转换显示模式</title>
+  <style>
+    /* 块级 ：独占一行；宽度 默认是 父级的100% ，加宽高生效*/
+    div {
+      width: 200px;
+      height: 200px;
+
+      display: inline-block; /* 把 块级 转换为 行内块 显示模式 */
+    }
+
+    .div1 {
+      background-color: pink;
+    }
+
+    .div2 {
+      background-color: skyblue;
+    }
+
+    span {
+      width: 200px;
+      height: 200px;
+    
+      display: block;   /* 把 行内 转换为 块级  显示模式 */
+    }
+
+    /* 行内 : 一行共存多个，宽高属性不生效，宽高尺寸由内容撑开 */
+    .span1 {
+      background-color: red;
+    }
+
+    .span2 {
+      background-color: yellow;
+    }
+
+
+    /* 行内块 ：一行共存多个，宽高属性生效，宽高 默认由内容撑开； 加宽高生效 */
+    img {
+      width: 100px;
+      height: 100px;
+
+      display: block;    /* 把 行内块 转换为 块级 显示模式 */
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 块元素 -->
+  <div class="div1">div 标签1</div>
+  <div class="div2">div 标签2</div>
+
+  <!-- 行内元素 -->
+  <span class="span1">span 标签1</span>
+  <span class="span2">span 标签2</span>
+
+
+  <!-- 行内块元素  一般用于图片 -->
+  <img src="./cat.png" alt="">
+  <img src="./cat.png" alt="">
+</body>
+
+</html>
