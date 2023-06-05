@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>综合案例 1 -- 产品卡片</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;  /* 添加 内减模式 */
+    }
+
+    body {
+      background-color: #f1f1f1;
+    }
+
+    .product {
+      margin: 50px auto; 
+      padding-top: 40px;  /* 记得在父级中添加 内减模式，防止撑大元素本身 */
+      width: 270px;
+      height: 253px;
+      background-color: #fff;
+      text-align: center;
+      border-radius: 10px;
+    }
+
+    .product h4 {
+      margin-top: 20px;
+      margin-bottom: 12px;
+      font-size: 18px;
+      color: #333;
+      font-weight: 400; /* 字体粗细 400 属于 正常*/
+    }
+
+    .product p {
+      font-size: 12px;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <div class="product">
+    <img src="./liveSDK.png" alt="">
+    <h4>西瓜直播SDK</h4>
+    <p>包含抖音直播看播功能</p>
+  </div>
+</body>
+
+</html>

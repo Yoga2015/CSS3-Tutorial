@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CSS滚动条美化及兼容</title>
+  <style>
+    .list-box {
+      width: 200px;
+      height: 200px;
+      background-color: pink;
+
+      overflow: auto;  /* 溢出自动 ：溢出才显示滚动条位置*/
+    }
+
+    .list-box::-webkit-scrollbar {
+      width: 10px;
+      height: 10px;  /*高度写不写，都不影响，因为会根据内容的长度自动计算*/
+    }
+
+    .list-box::-webkit-scrollbar-thumb {
+      background: #ccc;                 /*滑块颜色*/
+      border-radius: 5px;                   /*滑块圆角*/
+    }
+
+    .list-box::-webkit-scrollbar-thumb:hover {
+      background: rgb(202, 172, 162);                         /*鼠标移入滑块变红*/
+    }
+
+    .list-box::-webkit-scrollbar-track {
+      border-radius: 10px;                  /*轨道圆角*/ 
+      background-color: #f1f1f1;         /*轨道颜色 */ 
+    }
+  </style>
+</head>
+
+<body>
+  <div class="list-box">
+    我是walking我是walking我是walking我是walking
+    我是walking我是walking我是walking我是walking
+    我是walking我是walking我是walking我是walking
+    我是walking我是walking我是walking我是walking
+    我是walking我是walking我是walking我是walking
+    我是walking我是walking我是walking我是walking
+    我是walking我是walking我是walking我是walking
+  </div>
+</body>
+
+</html>
