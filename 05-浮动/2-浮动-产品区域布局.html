@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>浮动 - 产品区域布局</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    li {
+      list-style: none;
+    }
+
+    .product {
+      /* 盒子模型的属性 ，尽量往上放 */
+      margin: 50px auto;
+
+      width: 1240px;
+      height: 628px;
+      background-color: pink;
+
+    }
+
+    .left {
+      float: left;
+      width: 234px;
+      height: 628px;
+      background-color: skyblue;
+    }
+
+    .right {
+      float: right;
+      width: 978px;
+      height: 628px;
+      background-color: orange;
+    }
+
+    .right li {
+      float: left;
+      margin-right: 14px;
+      margin-bottom: 14px;
+      width: 234px;
+      height: 300px;
+      background-color: yellowgreen;
+    }
+
+    /* 使用 浮动 时，有可能出现一个问题 ，
+       就是 即便 加了 浮动 ，父级宽度不够 ，浮动的盒子也会掉下来 
+       我们需要调整 父级元素，让 父级元素 能够 容纳 所以 子级元素。
+
+       第4个 li 和 第 8个 li 去掉 右侧的margin
+     */
+
+    .right li:nth-child(4n) {
+      margin-right: 0;
+      
+    }
+
+    /* 细节 ： 如果 父级宽度 不够，浮动的盒子会掉下来  */
+  </style>
+</head>
+
+<body>
+  <!-- 左面：一个大图; 右面：8个产品 ->8个li -->
+  <div class="product">
+
+    <div class="left"></div>
+
+    <div class="right">
+      <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </div>
+  </div>
+
+</body>
+
+</html>

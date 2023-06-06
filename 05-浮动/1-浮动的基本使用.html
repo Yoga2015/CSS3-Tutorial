@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>浮动 的基本使用</title>
+  <style>
+    /* 浮动特点 : 顶对齐；具备行内块显示模式特点；浮动的盒子会脱标 */
+    .box1 {
+      width: 100px;
+      height: 100px;
+      background-color: pink;
+
+      /* 
+        当只有 box1 浮动时，会出现 box1 压在 box2 上，
+        因为 浮动的盒子 会脱离标准流的控制，不再 占用 标准流的位置。
+
+        在 浏览量 看来 box1 这个盒子 根本就不存在，
+        在 浏览量 看来 第一个盒子是 box2，
+        所以 box2 也才 显示 在浏览器的左上角。
+        因此，会出现 box1 压在 box2 上，这就是 浮动 的 脱离标准流 现象。
+
+        所以在工作中 只要有一个盒子要浮动，其他盒子就都浮动；
+        不要浮动，就都不浮动。
+      */
+      float: left;
+    }
+
+    .box2 {
+      width: 200px;
+      height: 200px;
+      background-color: orange;
+
+      /* float: left; */
+      float: right;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box1">box1</div>
+  <div class="box2">box2</div>
+</body>
+
+</html>

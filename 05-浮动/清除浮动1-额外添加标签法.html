@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>清除浮动1-额外添加标签法</title>
+  <style>
+    .top {
+      margin: 0 auto;
+      width: 1200px;
+      /* height: 300px; */
+      background-color: pink;
+    }
+
+    .left {
+      float: left;
+      width: 200px;
+      height: 300px;
+      background-color: skyblue;
+    }
+
+    .clearfix {
+      clear: both;
+    }
+
+    .right {
+      float: right;
+      width: 950px;
+      height: 300px;
+      background-color: orange;
+    }
+
+    .bottom {
+      height: 100px;
+      background-color: brown;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="top">
+    <div class="left"></div>
+    <div class="right"></div>
+    <div class="clearfix"></div>
+  </div>
+
+  <div class="bottom"></div>
+</body>
+
+</html>
