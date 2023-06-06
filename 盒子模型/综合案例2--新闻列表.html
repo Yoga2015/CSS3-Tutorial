@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>综合案例 2 -- 新闻列表</title>
+  <style>
+    /* 1、首先 ，很多标签 都有 默认样式 ，先清除默认样式 */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    li {
+      list-style: none;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    .new {
+      margin: 100px auto;
+      width: 360px;
+      height: 200px;
+      /* background-color: pink; */
+    }
+
+    /* 新闻列表--标题区*/
+    .new .hd {
+      height: 34px;
+      background-color: #eee;
+      border: 1px solid #dbdee1;
+      border-left: 0; /* 单独设置 左边框 为 0 */
+    }
+
+    .new .hd a {
+      margin-top: -1px;
+      /* -1 盒子向上移动 */
+      display: block;
+      /* a标签 是 行内标签，需要转换 显示模式 后，设置的宽、高才生效*/
+      border-top: 3px solid orange;
+      border-right: 1px solid #dbdee1;
+      width: 48px;
+      height: 34px;
+      background-color: #fff;
+
+      font-size: 14px;
+      color: #333;
+      text-align: center;
+      line-height: 30px;
+      /* 原本 行高 应设置成 34px 才能 垂直居中 的，但父级也有边框*/
+    }
+
+    /* 新闻列表--内容区*/
+    .new .bd {
+      padding: 5px;
+    }
+
+    /* 给 li 加一个 背景图 */
+    .new .bd li {
+      padding-left: 15px;
+      background-image: url(./images/xiaodian.png);
+      background-repeat: no-repeat;
+      background-position: 0 center;
+    }
+
+    /* 给 li 中 的 a 加一个 背景图 */
+    .new .bd li a {
+      padding-left: 25px;   /* 由于 文字内容 压在 背景图 上方 ，所以需要把 文字内容 向后挪 */
+      background: url(./images/videoNewsLeft.gif) no-repeat 0 center;
+
+      font-size: 12px;
+      color: #666;
+      line-height: 24px;
+    }
+
+    .new .bd li a:hover {
+      color: orange;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 新闻列表 -->
+  <div class="new">
+
+    <!--新闻列表 标题区 -->
+    <div class="hd">
+      <a href="#">新闻</a>
+    </div>
+
+    <!--新闻列表 内容区 -->
+    <div class="bd">
+      <ul>
+        <li><a href="#">印度耗资百亿卢比大桥坍塌</a></li>
+        <li><a href="#">男教师跳女团舞为考生解压</a></li>
+        <li><a href="#">奔跑吧：侯明昊飞檐走壁</a></li>
+        <li><a href="#">乘风：二公《面纱》舞台</a></li>
+        <li><a href="#">青年派：郑钧汪峰同框热聊</a></li>
+        <li><a href="#">桃花坞：宋茜说孟子义好笑</a></li>
+      </ul>
+    </div>
+    
+  </div>
+</body>
+
+</html>
