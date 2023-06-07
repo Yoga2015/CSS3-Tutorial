@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>flex布局-弹性伸缩比 flex</title>
+  <style>
+    /* 默认情况下，主轴方向尺寸 是 靠 内容 撑开的； 侧轴 默认拉伸 */
+    /* 弹性伸缩比，默认情况下 是 主轴方向（水平方向） ，指 水平方向的宽 */
+
+    .box {
+      display: flex;
+      /* flex-direction: column; */
+      /* 如果 修改了 主轴方向 为 垂直方向，指 垂直方向的高  */
+
+      height: 300px;
+      border: 1px solid black;
+    }
+
+    .box div {
+      /* height: 100px; */
+      background-color: pink;
+    }
+
+    .box div:nth-child(1) {
+      width: 200px;
+    }
+
+    .box div:nth-child(2) {
+      flex: 1;
+    }
+
+    .box div:nth-child(3) {
+      flex: 2;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+  </div>
+</body>
+
+</html>

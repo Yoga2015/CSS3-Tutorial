@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>flex布局-侧轴对齐方式 align-items、 align-self</title>
+  <style>
+    /* 侧轴对齐方式 是 垂直方向 的 */
+    /* align-items  当前弹性容器内 所有弹性盒子 的 侧轴对齐方式（给 弹性容器 设置） */
+    /* align-self   单独控制 某个弹性盒子的侧轴对齐方式 （给 弹性盒子 设置） */
+
+    .box {
+      display: flex;
+
+      /* 弹性盒子 在 侧轴方向 没有尺寸 才能拉伸 。 前提 是 子元素 不能 有高度 */
+      align-items: stretch;
+
+      /* 垂直居中 */
+      align-items: center;
+
+      /* 默认的  */
+      align-items: flex-start;
+
+      /* 垂直方向的最底部 */
+      align-items: flex-end;
+
+      height: 300px;
+      border: 1px solid #000;
+    }
+
+    
+
+    .box div:nth-child(2) {    /* 让第二个div 的 侧轴 居中对齐 */
+      align-self: center;
+    }
+
+     /* align-self   单独控制 某个弹性盒子的侧轴对齐方式 （给 弹性盒子 设置） */
+
+    .box div {
+      width: 200px;
+      height: 100px;
+      background-color: pink;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+  </div>
+</body>
+
+
+</html>

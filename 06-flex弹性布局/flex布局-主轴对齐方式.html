@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>flex布局-主轴对齐方式-justify-content</title>
+  <style>
+    /* 弹性容器 */
+    .box {
+      display: flex;
+
+      /* justify-content: flex-start;  // 默认的 */
+      /* justify-content: flex-end;   //  不常用的 */
+
+      /* 居中 */
+      justify-content: center;
+
+      /* 父级 剩余的尺寸 分配成 间距 */
+
+      /* 弹性盒子 之间 的 间距相等 */
+      justify-content: space-between;
+
+      /* 间距 出现在 弹性盒子 两侧 */
+      /* 视觉效果：弹性盒子 之间 的 间距 是 两端间距的 2倍 */
+      justify-content: space-around;
+
+      /* 各个间距 都 相等 ，包括 弹性盒子 和 弹性容器 之间的距离*/
+      justify-content: space-evenly;
+
+      width: 900px;
+      height: 300px;
+      border: 1px solid #000;
+    }
+
+    /* 弹性盒子 : 沿着 主轴方向排列 */
+    .box div {
+      width: 200px;
+      height: 100px;
+      background-color: pink;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <div class="box">
+
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+
+  </div>
+
+</body>
+
+</html>

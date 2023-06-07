@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>修改主轴方向 flex-direction</title>
+  <style>
+    .box {
+      display: flex;
+
+      /* 修改 主轴方向 垂直方向：侧轴 自动变换到 水平方向 */
+      flex-direction: column;
+
+      /* 主轴 在垂直，视觉效果 ： 垂直居中 */
+      justify-content: center;
+
+      /* 侧轴 在水平，视觉效果 ：水平居中 */
+      align-items: center;
+
+      width: 150px;
+      height: 120px;
+      background-color: pink;
+      color: yellowgreen;
+    }
+
+    img {
+      width: 32px;
+      height: 32px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box">
+    <img src="./images/videoNewsLeft.gif" alt="">
+    <span>媒体</span>
+  </div>
+</body>
+
+</html>
