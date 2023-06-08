@@ -1,0 +1,121 @@
+/* 首页CSS样式 */
+
+/* 版心 */
+.wrapper {
+  margin: 0 auto;
+  width: 1200px;
+}
+
+body {
+  background-color: #f3f5f7;
+}
+
+/* 头部区域 */
+.header {
+  height: 100px;
+  background-color: #fff;
+}
+
+.header .wrapper {
+  display: flex;
+  padding-top: 30px;
+}
+
+/* logo */
+.logo a {
+  /* a标签 是 行内元素，需 转显示模式 为 块级 ，宽、高才生效 */
+  display: block;
+  width: 195px;
+  height: 42px;
+  background-image: url(../images/logo.png);
+  /* 隐藏文字 */
+  font-size: 0;
+}
+
+
+/* 导航 */
+.nav {
+  margin-left: 102px;
+}
+
+.nav ul {
+  display: flex;
+}
+
+.nav ul li {
+  margin-right: 24px;
+}
+
+.nav li a {
+  display: block;
+  padding: 6px 8px;
+  line-height: 27px;
+  font-size: 19px;
+}
+
+/* active 类选择器 ，表示 默认选中的 a */
+.nav li .active,
+.nav li a:hover {
+  border-bottom: 2px solid #00a4ff;
+}
+
+
+/* 搜索 */
+.search {
+  display: flex;
+  margin-left: 64px;
+  padding-left: 19px;
+  padding-right: 12px;
+  width: 412px;
+  height: 40px;
+  background-color: #f3f5f7;
+  border-radius: 20px;
+}
+
+.search input {
+  /* 让 input 占用 父级 剩余 尺寸 的 份数 */
+  flex: 1;
+  /* 去掉 input 的 边框 */
+  border: 0;
+  /* 背景色 可以设置成 和父级一样，也可以设置 透明  */
+  background-color: transparent;
+  /* 去掉 表单控件 的 焦点框 */
+  outline: none;
+}
+
+/* ::placeholder 选中 就是 placeholder属性文字样式 */
+.search input::placeholder {
+  font-size: 14px;
+  color: #999;
+}
+
+/* 父级 是 flex布局 ，子级 自动变 弹性盒子，加宽、高生效 */
+.search a {
+  align-self: center;
+  width: 16px;
+  height: 16px;
+  font-size: 14px;
+  color: #00a4ff;
+}
+
+
+/* 用户 */
+.user {
+  margin-left: 32px;
+  margin-top: 4px;
+  width: 118px;
+  height: 33px;
+}
+
+.user img {
+  /* vertical-align 处理 行内 和 行内块 的 垂直方向对齐方式 */
+  vertical-align: middle;
+  width: 33px;
+  height: 33px;
+}
+
+.user span {
+  margin-left: 7px;
+  font-size: 16px;
+  color: #666;
+}
