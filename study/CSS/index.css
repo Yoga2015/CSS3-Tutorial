@@ -1,17 +1,19 @@
 /* 首页CSS样式 */
 
-/* 版心 */
+/* 版心  公共样式 */
 .wrapper {
   margin: 0 auto;
   width: 1200px;
-
+  /* border: 1px solid red; */
 }
 
 body {
   background-color: #f3f5f7;
 }
 
-/* 头部区域 */
+
+
+/* header 头部区域 */
 .header {
   height: 100px;
   background-color: #fff;
@@ -61,7 +63,6 @@ body {
 .nav li a:hover {
   border-bottom: 2px solid #00a4ff;
 }
-
 
 /* 搜索 */
 .search {
@@ -127,6 +128,8 @@ body {
 }
 
 
+
+
 /* banner 区域 */
 .banner {
   height: 420px;
@@ -138,7 +141,7 @@ body {
   display: flex;
   justify-content: space-between;
   height: 420px;
-  background-image: url(../images/banner2.png);
+  background-image: url(../images/banner.png);
   color: #f3f5f7;
   /* border: 1px solid red;  方便自己看 版心 */
 }
@@ -208,19 +211,6 @@ body {
   border-radius: 10px;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 .banner .right dl {
   margin-bottom: 12px;
   border-bottom: 1px solid #e0e0e0;
@@ -258,3 +248,49 @@ body {
   color: #fff;
   border-radius: 15px;
 }
+
+
+
+/* 精品推荐 */
+.recommend {
+  margin-top: 8px;
+  padding: 0 20px;
+  height: 60px;
+  display: flex;
+  background-color: #fff;
+  box-shadow: 0px 2px 3px 0px rgba(118, 118, 118, 0.2);
+  line-height: 60px;
+}
+
+.recommend h3 {
+  font-size: 18px;
+  color: #00a4ff;
+  font-weight: 400;
+}
+
+.recommend ul {
+  /* 除去 标题 和 修改兴趣 的尺寸,父级剩余尺寸都给ul,实现 把修改兴趣挤到最右侧 */
+  flex: 1;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.recommend ul li a {
+  padding: 0 24px;
+  border-right: 1px solid #bfbfbf;
+  /* 给 a 标签加 右边框*/
+
+  font-size: 15px;
+}
+
+/* 给最后一个 li 中的a标签 去掉  右边框 */
+.recommend ul li:last-child a {
+  border-right: 0;
+}
+
+.recommend .modify {
+  font-size: 15px;
+  color: #00a4ff;
+}
+
+
