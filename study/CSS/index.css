@@ -294,3 +294,83 @@ body {
 }
 
 
+/* 精品推荐课程 */
+.course {
+  margin-top: 15px;
+  /* height: 595px; */
+}
+
+/* 标题 - 公共类，与其他区域共用 */
+.hd {
+  display: flex;
+  justify-content: space-between;
+  height: 60px;
+  line-height: 60px;
+}
+
+.hd h3 {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.hd .more {
+  padding: 8px 0px 0px;
+  font-size: 14px;
+  color: #999;
+}
+
+.hd .more::after {
+  content: '>';
+}
+
+/* 课程内容 - 公共类，与其他区域共用 */
+.bd ul {
+  display: flex;
+  /*宽度挤满 就 换行 */
+  flex-wrap: wrap;
+  /* 主轴对齐方式*/
+  justify-content: space-between;
+  /* 行对齐方式 */
+  align-content: space-evenly;
+}
+
+.bd li {
+  /*垂直隔开 让 每个li 保持距离 */
+  margin-bottom: 14px;
+  width: 228px;
+  height: 270px;
+  background-color: #fff;
+}
+
+.bd li .pic {
+  height: 156px;
+}
+
+.bd li .text {
+  padding: 20px;
+  height: 115px;
+  background-color: #fff;
+}
+
+.bd li .text h4 {
+  margin-bottom: 13px;
+  height: 40px;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+}
+
+/* 观察内部整体的样式是否一样， 让子级继承*/
+.bd li .text p {
+  font-size: 14px;
+  line-height: 20px;
+  color: #999;
+}
+
+.bd li .text p span {
+  color: orange;
+}
+
+.bd li .text p i {
+  font-style: normal;
+}
