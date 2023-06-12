@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>垂直对齐方式vertical-align</title>
+  <style>
+    div {
+      border: 1px solid black;
+    }
+
+    img {
+      /* 基线对齐 */
+      vertical-align: baseline;
+
+      /* 顶部对齐 ：最高内容的顶部 */
+      vertical-align: top;
+
+      /* 底部对齐 ：最高内容的底部 */
+      vertical-align: bottom;
+
+      /* 居中对齐     常用  */
+      vertical-align: middle;
+
+      /* 因为 浏览器 把 行内块、行内标签 当做 文字处理，默认按基线对齐。  */
+      /* 效果 ： 图片img 的底下有空白，转 块级 不按 基线对齐，空白 就 消失了  */
+      display: block;
+    }
+  </style>
+</head>
+
+<body>
+  <div>
+    <img src="./images/cat.png" alt="">
+    如果要把 图 和 文字 水平对齐，就使用 垂直对齐方式 vertical-align:middle;
+  </div>
+</body>
+
+</html>
