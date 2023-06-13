@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>内容溢出</title>
+  <style>
+    div {
+      display: flex;
+      margin: 100px auto;
+      width: 200px;
+      height: 200px;
+      background-color: pink;
+      /* 溢出隐藏     常用*/
+      overflow: hidden;
+      transition: all 0.8s;
+      position: relative;
+    }
+
+    img {
+      position: absolute;
+      width: 200px;
+      height: 200px;
+    }
+
+    div:hover .img1 {
+      transform: translateX(-200%);
+    }
+
+    div:hover .img2 {
+      transform: translateX(-100%);
+    }
+  </style>
+</head>
+
+<body>
+  <div>
+    <img src="./images/huawei1.jpeg" class="img1" alt="">
+    <img src="./images/huawei2.jpeg" class="img2" alt="">
+    <img src="./images/product3.jpeg" class="img3" alt="">
+  </div>
+</body>
+
+</html>

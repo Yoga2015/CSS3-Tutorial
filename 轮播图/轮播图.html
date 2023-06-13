@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>轮播图</title>
+  <link rel="stylesheet" href="./iconfont/iconfont.css">
+  <link rel="stylesheet" href="./CSS/base.css">
+  <style>
+    .banner {
+      margin: 100px auto;
+      width: 564px;
+      height: 315px;
+      /* background-color: pink; */
+      overflow: hidden;
+      position: relative;
+    }
+
+    .banner ul {
+      display: flex;
+    }
+
+    /* 图片 */
+    .banner img {
+      /* 去掉底部的小空白，也可以使用 display: block; */
+      vertical-align: middle;
+      width: 564px;
+      height: 315px;
+      border-radius: 12px;
+    }
+
+    /* 箭头 */
+    .banner .prev,
+    .banner .next {
+      display: none;
+      /* 使用绝对定位后，a标签 就不用转显示模式了*/
+      position: absolute;
+      top: 50%;
+      transition: translateY(-50%);
+      width: 20px;
+      height: 30px;
+      background-color: rgba(0, 0, 0, 0.3);
+      color: #fff;
+      line-height: 30px;
+    }
+
+    .banner:hover .prev,
+    .banner:hover .next {
+      display: block;
+    }
+
+    .banner .prev {
+      left: 0;
+      border-radius: 0px 15px 15px 0px;
+    }
+
+    .banner .next {
+      right: 0;
+      border-radius: 15px 0px 0px 15px;
+      text-align: center;
+    }
+
+    /* 圆点  */
+    .banner ol {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      height: 13px;
+      background-color: rgba(255, 255, 255, 0.3);
+
+      display: flex;
+      border-radius: 10px;
+    }
+
+    .banner ol li {
+      width: 8px;
+      height: 8px;
+      background-color: #fff;
+      border-radius: 50%;
+      margin: 3px;
+      font-size: 0;
+
+      /* 鼠标移入 li 时 */
+      /* pointer 小手 效果，提示用户可以点击 */
+      cursor: pointer;
+    }
+
+    /* 橙色 li */
+    .banner ol li:hover,
+    .banner ol .active {
+      background-color: orange;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="banner">
+    <!-- 图片 ：轮播图 就用 ul > li -->
+    <ul>
+      <li><a href="#"><img src="./images/huawei1.jpeg" alt=""></a></li>
+      <li><a href="#"><img src="./images/huawei2.jpeg" alt=""></a></li>
+      <li><a href="#"><img src="./images/product3.jpeg" alt=""></a></li>
+      <li><a href="#"><img src="./images/product4.jpg" alt=""></a></li>
+    </ul>
+
+    <!-- 箭头 ： 一左一右-->
+    <!-- 上一张 prev -->
+    <a href="#" class="prev">
+      <i class="iconfont icon-icon-test15"></i>
+    </a>
+    <!-- 下一张 next -->
+    <a href="#" class="next">
+      <span class="iconfont icon-icon-test17"></span>
+    </a>
+
+    <!-- 圆点 : 圆点的个数 是 和图片一样 的 -->
+    <ol>
+      <li>1</li>
+      <li class="active">2</li>
+      <li>3</li>
+    </ol>
+
+  </div>
+</body>
+
+</html>
