@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>透视效果</title>
+  <style>
+    /* 视距 属性 必须 添加给 直接父级 , 取值范围 800-1200 */
+    .father {
+      perspective: 1000px;   /* 取值范围 800-1200 符合人类的观察视线 */
+      /* perspective: 10000px; */
+      /* perspective: 200px; */
+    }
+
+    .son {
+      margin: 100px auto;
+      width: 200px;
+      height: 200px;
+      background-color: pink;
+      transition: all 0.5s;
+    }
+
+    .son:hover {
+      
+      /* 需要给 自身的父级 添加 视距 perspective , Z轴才生效 */
+      transform: translateZ(-300px);  /*负数 就 远小，变小效果*/
+
+      transform: translateZ(300px);   /*正数 就 近大，变大效果*/
+    }
+  </style>
+</head>
+
+<body>
+  <div class="father">
+    <div class="son"></div>
+  </div>
+</body>
+
+</html>

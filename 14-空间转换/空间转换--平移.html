@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>空间转换--平移</title>
+  <style>
+    .box {
+      margin: 100px auto;
+      width: 200px;
+      height: 200px;
+      background-color: pink;
+      transition: all 0.5s
+    }
+
+    .box:hover {
+      /* 由于 电脑 是 平面，默认 无法观察 Z 轴 平移效果 */
+      transform: translate3d(100px, 200px, 300px);
+
+      /* 3d 小括号 里面 必须 逗号隔开 三个数 */
+      /* transform: translate3d(100px, 200px); */
+
+      transform: translateX(100px);
+      transform: translateY(-100%);
+      transform: translateZ(300px);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box"></div>
+</body>
+
+</html>

@@ -33,7 +33,7 @@
       .box2:hover img,
       .box3:hover img {
         transform: scale(1.2); /*  放大1.2倍数 */
-        transition: all 0.5s;
+        transition: all 1s;
       }
 
       .box1 .title,
@@ -48,12 +48,14 @@
         font-size: 18px;
         font-weight: 700;
         transform: translateY(30px);
+        transition: all 0.8s;
       }
 
       .box1:hover .title,
       .box2:hover .title,
       .box3:hover .title {
         transform: translateY(0);
+        transition: all 0.8s;
       }
 
       /* 1、准备盒子，定位压在图片的上面 */
@@ -69,12 +71,12 @@
         height: 212px;
         background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
         opacity: 0; /* 设置 mask 的透明度 为 0 ，默认看不见 遮挡层*/
-        transition: all 0.5s; /* 过渡效果，让 遮挡层 遮挡时有缓动的动画效果 */
+        transition: all 1s; /* 过渡效果，让 遮挡层 遮挡时有缓动的动画效果 */
       }
 
       /* 鼠标移入 box , mask 发生变化 , 让 mask 的透明度 为 1*/
       .box1:hover .mask,
-      .box2:hover .mask,
+      .box2:hover .mask,  
       .box3:hover .mask {
         opacity: 1;
       }

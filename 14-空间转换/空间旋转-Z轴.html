@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>空间旋转 rotateZ()</title>
+  <style>
+    .box {
+      margin: 100px auto;
+      width: 300px;
+      perspective: 800px;
+    }
+
+    img {
+      width: 300px;
+      transition: all 2s;
+    }
+
+    /* 平面旋转、空间旋转  的视觉效果是一样的 */
+    .box img:hover {
+      transform: rotateZ(360deg);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box">
+    <img src="./images/hero.jpeg" alt="">
+  </div>
+</body>
+
+</html>
