@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>轮播图</title>
+  <link rel="stylesheet" href="./css/base.css">
+  <link rel="stylesheet" href="./iconfont/iconfont.css">
+  <style>
+    .banner-list {
+      margin: 50px auto;
+      width: 800px;
+      height: 480px;
+    }
+
+    .banner-list ul {
+      position: relative;
+    }
+
+    .banner-list ul li {
+      position: absolute;
+    }
+
+    .banner-list img {
+      width: 500px;
+      height: 400px;
+    }
+
+    .banner-list .left {
+      z-index: 0;
+      transform: translate(-160px) scale(0.9);
+      transform-origin: left center;
+    }
+
+    .banner-list .banner-item {
+      z-index: 1;
+    }
+
+    .banner-list .right {
+      z-index: 0;
+      transform: translate(160px) scale(0.9);
+      transform-origin: right center;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="banner-list">
+    <ul>
+      <li class="banner-item left">
+        <a href=""><img src="./images/lunbo0.jpg" alt=""></a>
+      </li>
+      <li class="banner-item">
+        <a href=""><img src="./images/lunbo1.jpg" alt=""></a>
+      </li>
+      <li class="banner-item right">
+        <a href=""><img src="./images/lunbo3.jpg" alt=""></a>
+      </li>
+    </ul>
+  </div>
+</body>
+
+</html>

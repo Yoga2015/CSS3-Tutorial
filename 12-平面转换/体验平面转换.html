@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>体验平面转换</title>
+  <style>
+    div {
+      margin: 100px 0;
+      width: 200px;
+      height: 200px;
+      background-color: pink;
+
+      /* 平面转换时，一般 与 过渡（transition）配合使用 */
+      transition: all 1s;
+    }
+
+    /* 鼠标划过 添加 动态效果 ，鼠标离开后会复原 */
+    /* transform 是 复合属性，平面位移 500px + 平面旋转 360度 、平面缩放 2倍 、平面倾斜 180度*/
+    div:hover {
+      transform: translate(500px) rotate(360deg) scale(2) skew(180deg);
+    }
+  </style>
+</head>
+
+<body>
+  <div>宽200、高200</div>
+</body>
+
+</html>

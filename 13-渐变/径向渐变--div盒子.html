@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>径向渐变</title>
+  <style>
+      div{
+        width: 100px;
+        height: 100px;
+        background-color: pink;
+        border-radius: 50%;
+
+        /* 画 一条半径 为50像素的圆，而且圆心出现在div盒子的 水平居中，垂直居中。*/
+        background-image: radial-gradient(
+          50px at center center,
+          red,
+          pink
+        );
+
+        /* 画 两条半径 , 圆心位置取值：方位名词 */
+        background-image: radial-gradient(
+          50px 20px at center center,
+          red,
+          pink
+        );
+
+        /* 画 两条半径 ,  圆心位置取值： 像素单位数值 或者 百分比 */
+        background-image: radial-gradient(
+          50px 20px at 50px 30px,
+          red,
+          pink
+        );
+      }
+  </style>
+</head>
+<body>
+  <div></div>
+</body>
+</html>

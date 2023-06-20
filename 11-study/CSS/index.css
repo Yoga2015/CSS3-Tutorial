@@ -246,6 +246,10 @@ body {
   font-size: 16px;
   color: #fff;
   border-radius: 15px;
+
+  background-image: linear-gradient(to right,
+      rgba(255, 255, 255, 0.6),
+      #00a4ff);
 }
 
 
@@ -465,10 +469,17 @@ body {
   font-size: 16px;
   color: #00a4ff;
   border-radius: 10px;
+
+
 }
 
 .footer .left .download:hover {
   background-color: #9bceea;
+  background-image: radial-gradient(
+    60px at 18px 10px, /* 半径 at 圆心位置 */
+    rgba(255, 255, 255, 0.8),
+    transparent
+  );
 }
 
 
