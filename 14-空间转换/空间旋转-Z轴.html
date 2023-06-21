@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>空间旋转 rotateZ()</title>
+  <title>空间旋转 Z轴 rotateZ()</title>
   <style>
     .box {
       margin: 100px auto;
@@ -19,7 +19,11 @@
 
     /* 平面旋转、空间旋转  的视觉效果是一样的 */
     .box img:hover {
+      /* 度数是正数，以图片 左下角 为 基准点 进行旋转 */
       transform: rotateZ(360deg);
+
+      /* 度数是负数，以图片 右下角 为 基准点 进行旋转 */
+      transform: rotateZ(-360deg);
     }
   </style>
 </head>
