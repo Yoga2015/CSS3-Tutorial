@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>animation复合属性</title>
+  <style>
+    .box {
+      width: 200px;
+      height: 100px;
+      background-color: pink;
+
+      animation: change 2s;
+
+      /* 速度曲线 ：linear  匀速 */
+      animation: change 2s linear;
+
+      /* steps : 分布动画，工作中，配合精灵图 实现精灵动画 */
+      animation: change 2s steps(3);
+
+      /* 延迟时间 ：如果有两个时间值， 第一个 时间 表示 动画时长，第二个时间 表示 延迟时间 */
+      animation: change 1s 2s;
+
+      /* 重复的次数 ，infinite ：无限循环  */
+      animation: change 1s 3;
+      animation: change 1s infinite;
+
+      /* 动画方向： alternate 反向 */
+      animation: change 1s infinite alternate;
+
+      /* 动画执行 完毕时 的状态，forwards ：结束状态，backwards：开始状态（默认） */
+      animation: change 1s forwards;
+      animation: change 1s backwards;
+    }
+
+    /* 宽度 从 200 变化到 800 */
+    @keyframes change {
+      from {
+        width: 200px;
+      }
+
+      to {
+        width: 800px;
+      }
+    }
+  </style>
+</head>
+
+<body>  <div class="box"></div>  </body>
+
+</html>

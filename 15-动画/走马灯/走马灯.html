@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>animation走马灯</title>
+  <link rel="stylesheet" href="./css/base.css">
+  <style>
+    .box {
+      margin: 100px auto;
+      width: 600px;
+      height: 112px;
+      border: 5px solid black;
+      overflow: hidden;
+    }
+
+    img {
+      display: block;
+      width: 200px;
+      height: 100%;
+    }
+
+    .box ul {
+      display: flex;
+
+      animation: move 6s infinite linear;
+    }
+
+    /* 1、定义位移动画：ul使用动画，子元素默认跟随 、 */
+    @keyframes move {
+      0% {
+        transform: translate(0);
+      }
+
+      100% {
+        /* 根据 图片张数 * 每张图的宽度 等于 移动距离 */
+        transform: translate(-1000px);
+      }
+    }
+
+    /* 2、鼠标悬停暂停动画 */
+    .box:hover ul {
+      animation-play-state: paused;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box">
+    <ul>
+      <li><img src="./images/huawei1.jpeg" alt=""></li>
+      <li><img src="./images/huawei2.jpeg" alt=""></li>
+      <li><img src="./images/product3.jpeg" alt=""></li>
+      <li><img src="./images/product4.jpg" alt=""></li>
+      <li><img src="./images/hero.jpeg" alt=""></li>
+
+      <!-- 替身 : 填补显示区域的露白 -->
+      <li><img src="./images/huawei1.jpeg" alt=""></li>
+      <li><img src="./images/huawei2.jpeg" alt=""></li>
+      <li><img src="./images/product3.jpeg" alt=""></li>
+      
+    </ul>
+  </div>
+</body>
+
+</html>

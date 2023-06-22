@@ -1,0 +1,137 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* 大背景 */
+/* 默认状态 HTML 和 body 的 高度 是 0，所以导致 cover缩放背景图不成功 */
+html {
+  height: 100%;
+}
+
+body {
+  display: block;
+  height: 100%;
+  background: url(../images/f1_1.jpg) no-repeat center 0 / cover;
+  /* background-size: cover; */
+}
+
+
+/* 云 */
+.cloud img {
+  position: absolute;
+  left: 50%;
+
+  /* 让所以图同时一起动， 也可以每张图单独设置 */
+  /* animation: cloudMove 1s infinite alternate linear; */
+}
+
+.cloud img:nth-child(1) {
+  margin-left: -200px;
+  margin-top: 20px;
+
+  animation: cloudMove 1s infinite alternate linear;
+}
+
+.cloud img:nth-child(2) {
+  margin-left: 400px;
+  margin-top: 100px;
+
+  animation: cloudMove 1s infinite alternate linear 0.4s;
+}
+
+.cloud img:nth-child(3) {
+  margin-left: -500px;
+  margin-top: 200px;
+
+  animation: cloudMove 1s infinite alternate linear 0.6s;
+}
+
+@keyframes cloudMove {
+  /*  初始值 为 0 ，可以省略不写
+  0% {
+    transform: translate(0);
+  } */
+
+  100% {
+    transform: translate(20px);
+  }
+}
+
+
+/* 字体 */
+.text img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  animation: textScale 1s;
+}
+
+/* 默认   小   大  小    默认 */
+@keyframes textScale {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  20% {
+    transform: translate(-50%, -50%) scale(0.1);
+  }
+
+  60% {
+    transform: translate(-50%, -50%) scale(1.4);
+  }
+
+  70% {
+    transform: translate(-50%, -50%) scale(0.8);
+  }
+
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+/* 热气球 */
+.balloon img {
+  position: absolute;
+  left: 50%;
+}
+
+.balloon img:nth-child(1) {
+  margin-left: -395px;
+  margin-top: 625px;
+  animation: balloonLift 1s infinite linear;
+}
+
+.balloon img:nth-child(2) {
+  margin-left: -150px;
+  margin-top: 610px;
+  animation: balloonLift 1s infinite linear 0.4s;
+}
+
+.balloon img:nth-child(3) {
+  margin-left: 90px;
+  margin-top: 620px;
+  animation: balloonLift 1s infinite linear 0.6s;
+}
+
+.balloon img:nth-child(4) {
+  margin-left: 300px;
+  margin-top: 630px;
+  animation: balloonLift 1s infinite linear 0.8s;
+}
+
+@keyframes balloonLift {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(-20px);
+  }
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>animation拆分法</title>
+  <style>
+    .box {
+      width: 200px;
+      height: 100px;
+      background-color: pink;
+
+      /* 动画名称 */
+      animation-name: move;
+      /* 动画时长 */
+      animation-duration: 2s;
+      /* 延迟时间 */
+      animation-delay: 3s;
+      /* 重复次数 */
+      animation-iteration-count: infinite;
+      /* 动画执行方向 */
+      animation-direction: alternate;
+
+      animation: move 2s 3s infinite alternate;
+    }
+
+    .box:hover {
+      /* 暂停动画 */
+      animation-play-state: paused;
+    }
+
+    @keyframes move {
+      0% {
+        width: 0;
+      }
+
+      100% {
+        width: 600px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box"> </div>
+</body>
+
+</html>

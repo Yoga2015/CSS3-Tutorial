@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>逐帧动画</title>
+  <style>
+    div {
+      width: 140px;
+      height: 140px;
+      border: 1px solid black;
+      background-image: url(./images/bg.png);
+
+      /* 使用 动画 ，帧数 与 精灵图个数相同 */
+      animation: run 1s steps(12) infinite;
+    }
+
+    /* 定义 动画 */
+    @keyframes run {
+      0% {
+        background-position: 0 0;
+      }
+
+      100% {
+        background-position: -1680px 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div></div>
+</body>
+
+</html>
