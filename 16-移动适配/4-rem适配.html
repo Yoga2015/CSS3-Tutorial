@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>rem适配、flexible</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    /* 1、使用媒体查询，给不同视口的屏幕设置不同的HTML字号 */
+    /* @media (width:360px) {
+      html {
+        font-size: 36px;
+      }
+    }
+
+    @media (width:375.15px) {
+      html {
+        font-size: 37.5px;
+      }
+    }
+
+    @media (width:414.55px) {
+      html {
+        font-size: 41.448px;
+      }
+    } */
+
+    /* 2、使用 rem单位 书写尺寸 */
+    .box {
+      width: 5rem;
+      height: 3rem;
+      background-color: pink;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="box"></div>
+
+  <!-- 1、使用 flexible.js后， 就不需自己给不同视口的屏幕设置不同的HTML字号了-->
+  <script src="./flexible.js"></script>
+</body>
+
+</html>
