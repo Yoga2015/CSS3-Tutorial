@@ -1,0 +1,21 @@
+.father{
+  color: red;
+  .son{
+    width: 200px;
+    a{
+      color: yellow;
+
+      //  & 表示的是 当前选择器 ，代码 写到谁的大括号里面 就表示谁，不会生成后代选择器
+      // & 应用 :配合 hover伪类 或  nth-child 结构伪类 使用
+      &:hover{
+        color: blue;
+      }
+      
+    }
+
+    // a:hover{
+    //   color: orange;
+    // }
+
+  }
+}
