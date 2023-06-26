@@ -1,0 +1,98 @@
+// out:../css/
+
+@import './base.less';
+
+// 定义变量
+@rootSize:37.5rem;
+
+// 头部
+header{
+  display: flex;
+  justify-content: space-between;
+  padding: 0 (15 / @rootSize);
+  height: (44 / @rootSize);
+  // background-color: pink;
+  line-height: (44 / @rootSize);  /* 居中 */
+  font-size: 16px;
+
+  .icon-icon-test15{
+    font-size: (22 / @rootSize);
+  }
+
+  h3{
+    font-size: (17 / @rootSize);
+  }
+
+  .note{
+    font-size: (15 / @rootSize);
+    color: #2cb5a5;
+  }
+}
+
+// banner区域
+.banner{
+  margin-top: (30 / @rootSize);
+  margin-bottom: (34 / @rootSize);
+  text-align: center;
+
+  img{
+    margin-bottom: (18 / @rootSize );
+    width: (300 / @rootSize);
+    height: (206 / @rootSize);
+  }
+  
+  p{
+    font-size: (16 / @rootSize);
+    span{
+      color: #16c2a3;
+    }
+  }
+}
+
+// 问诊类型
+.type {
+  padding: (15 / @rootSize);
+
+  li {
+    margin-bottom: (15 / @rootSize);
+    padding: 0 (15 / @rootSize);
+    height: (78 / @rootSize);
+    border: 1px solid #ededed;
+    border-radius: (4 / @rootSize);
+    a{
+      display: flex;
+      align-items: center;
+      height: (78 / @rootSize);  /* 内容 在 78 里面 垂直居中 */
+
+      .pic{
+        margin-right: (14 / @rootSize);
+        width: (40 / @rootSize);
+        height: (40 / @rootSize);
+
+        img{
+          width: (40 / @rootSize);
+          height: (40 / @rootSize);
+        }
+      }
+
+      .txt{
+        flex: 1;
+
+        h4{
+          font-size: (16 / @rootSize);
+          color: #3c3e3c;
+          line-height: (24 / @rootSize);
+        }
+
+        p{
+          font-size: (13 / @rootSize);
+          color: #848484;
+        }
+
+        .icon-arrow-right{
+          font-size: (16 / @rootSize);
+        }
+      }
+    }
+  }
+}

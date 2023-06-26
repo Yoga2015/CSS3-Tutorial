@@ -1,0 +1,92 @@
+/* 基础公共样式： 清除默认样式 + 设置通用样式 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+li {
+  list-style: none;
+}
+body {
+  font: 14px/1.5 Microsoft YaHei, Heiti SC, tahoma, arial, Hiragino Sans GB, "\5B8B\4F53", sans-serif;
+  color: #333;
+}
+a {
+  color: #333;
+  text-decoration: none;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 0.4rem;
+  height: 1.17333333rem;
+  line-height: 1.17333333rem;
+  /* 居中 */
+  font-size: 16px;
+}
+header .icon-icon-test15 {
+  font-size: 0.58666667rem;
+}
+header h3 {
+  font-size: 0.45333333rem;
+}
+header .note {
+  font-size: 0.4rem;
+  color: #2cb5a5;
+}
+.banner {
+  margin-top: 0.8rem;
+  margin-bottom: 0.90666667rem;
+  text-align: center;
+}
+.banner img {
+  margin-bottom: 0.48rem;
+  width: 8rem;
+  height: 5.49333333rem;
+}
+.banner p {
+  font-size: 0.42666667rem;
+}
+.banner p span {
+  color: #16c2a3;
+}
+.type {
+  padding: 0.4rem;
+}
+.type li {
+  margin-bottom: 0.4rem;
+  padding: 0 0.4rem;
+  height: 2.08rem;
+  border: 1px solid #ededed;
+  border-radius: 0.10666667rem;
+}
+.type li a {
+  display: flex;
+  align-items: center;
+  height: 2.08rem;
+  /* 内容 在 78 里面 垂直居中 */
+}
+.type li a .pic {
+  margin-right: 0.37333333rem;
+  width: 1.06666667rem;
+  height: 1.06666667rem;
+}
+.type li a .pic img {
+  width: 1.06666667rem;
+  height: 1.06666667rem;
+}
+.type li a .txt {
+  flex: 1;
+}
+.type li a .txt h4 {
+  font-size: 0.42666667rem;
+  color: #3c3e3c;
+  line-height: 0.64rem;
+}
+.type li a .txt p {
+  font-size: 0.34666667rem;
+  color: #848484;
+}
+.type li a .txt .icon-arrow-right {
+  font-size: 0.42666667rem;
+}
