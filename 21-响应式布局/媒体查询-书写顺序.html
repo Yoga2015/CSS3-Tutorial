@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>媒体查询 - 书写顺序</title>
+  <style>
+    /* 默认网页背景色是 灰色 */
+    body {
+      background-color: gray;
+    }
+
+    /* 屏幕宽度大于等于 768px,网页背景色是 粉色 */
+    @media (min-width:768px) {
+      body {
+        background-color: pink;
+      }
+    }
+
+    /* 屏幕宽度大于等于992px,网页背景色是 绿色 */
+    @media (min-width:992px) {
+      body {
+        background-color: green;
+      }
+    }
+
+    /* 屏幕宽度大于等于1200px，网页背景色是skyblue */
+    @media (min-width:1200px) {
+      body {
+        background-color: skyblue;
+      }
+    }
+
+    /* 
+      以上 四种不同的背景色 在不同屏幕尺寸下 都生效了，前提是 按顺序来写
+
+      使用 min-width（从小到大）、max-width （从大到小） 时，都要遵循 顺序来写 ，后面层叠前面的 ，
+      层叠性 的现象 就是 后面写的 都会覆盖 前面写的
+    */
+  </style>
+</head>
+
+<body>
+
+</body>
+
+</html>

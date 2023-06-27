@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>媒体查询 - 外部CSS（link）</title>
+
+  <!-- 视口宽度 小于等于 768px，网页背景色是黄色 -->
+  <link rel="stylesheet" media="(max-width:768px)" href="./pink.css">
+
+  <!-- 视口宽度 大于等于 1200px，网页背景色是绿色 -->
+  <link rel="stylesheet" media="(min-width:1200px)" href="./green.css">
+
+</head>
+
+<body>
+   视口宽度 在某个区间 时，可能需要调整 的 样式 ，特别多，
+   所以 通过 外部引入CSS 文件，但 检测 视口宽度的大小 的功能 还是在本页面的 ！
+</body>
+
+</html>

@@ -1,0 +1,25 @@
+.box {
+  margin: 50px 0;
+  width: 100px;
+  border-top: dotted 1px black;
+  border-bottom: solid 2px black;
+}
+.banner {
+  margin-bottom: 100px;
+}
+.banner a {
+  color: #111;
+  margin: 50px 0;
+  width: 100px;
+  border-top: dotted 1px black;
+  border-bottom: solid 2px black;
+  /* less 混入 */
+}
+.footer a {
+  color: red;
+  margin: 50px 0;
+  width: 100px;
+  border-top: dotted 1px black;
+  border-bottom: solid 2px black;
+  /* less 混入 */
+}

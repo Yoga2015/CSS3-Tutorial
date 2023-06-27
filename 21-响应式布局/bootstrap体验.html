@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>bootstrap体验</title>
+  <!-- 页面中 是 DOM树 、CSS树 先渲染的，所以 bootstrap.min.css 放前面 -->
+  <link rel="stylesheet" href="./bootstrap-3.4.1-dist/css/bootstrap.min.css">
+  <!-- bootstrap的所有插件 都 依赖于 jQuery，jQuery 必须在所有插件之前引入页面 -->
+  <script src="./js/jquery.js"></script>
+  <script src="./bootstrap-3.4.1-dist/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    div 只需添加 container 类选择器 ，就能 得到 响应式 的 版心 效果<br>
+    网格系统 的 重点:
+    BootStrap 的 网格列 设置很有意思，会把 一行 分为 12份
+  </div>
+
+  <div class="row">
+    <!-- 大型PC显示器：当 浏览器 容器宽度 大于等于 1200 时，将采用 .col-lg- 开头的列。 -->
+    <!-- 小型PC显示器：当 浏览器 容器宽度 处于 ( 992,1200) 时，将采用 .col-md- 开头的列。 -->
+    <!-- 平板 ：当 浏览器 容器宽度 处于（ 768 , 992 ) 时，将采用 .col-sm- 开头的列。 -->
+    <!-- 手机 ：当 浏览器 容器宽度 小于等于 768像素 时，Bootstrap会采用 .col-xs- 开头的列。 -->
+    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" style="background-color: orange">1</div>
+    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" style="background-color: pink">2</div>
+    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" style="background-color: skyblue">3</div>
+    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" style="background-color: yellow">4</div>
+  </div>
+
+  没有 BootStrap 的时候，使用 媒体查询 检测 视口的宽度 ，<br>
+  在不同视口宽度 下 ，需要设置版心尺寸，每个盒子也要设置尺寸
+</body>
+
+</html>
