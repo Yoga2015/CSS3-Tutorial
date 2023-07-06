@@ -1,0 +1,6 @@
+.banner {
+  margin: 0 auto;
+}
+.banner li a {
+  background-image: url(images/banner0.jpg);
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>变量案例弹出用户名</title>
+</head>
+
+<body>
+
+  <!-- <script>
+
+      //1、用户输入姓名   存储到一个 myname 的变量里面
+
+      var myname = prompt('请输入你的名字');
+
+      alert('欢迎' + myname + '回来！\n 祝你在这里玩得开心')
+
+      //注意： 从 prompt()里 获取过来的数据 都是 字符串型的
+
+    </script> -->
+
+  <script>
+    /**
+     * 交换两个变量的值 案例
+     * js 是 编程语言 有很强的逻辑性 在里面：实现这个要求的思路，先怎么做后怎么做?
+     * 
+      * 1、我们需要一个临时变量 temp 帮我们，它是空的
+      * 2、把 apple1 的 值（青苹果） 赋值给 我们的临时变量 temp
+      * 3、把 apple2 的 值（红苹果） 赋值给 apple1
+      * 4、把 临时变量 temp 的值 给 apple2。
+    */
+
+    var temp;
+
+    var apple1 = '青苹果';
+    var apple2 = '红苹果';
+
+    temp = apple1;
+    apple1 = apple2;
+    apple2 = temp;
+
+    console.log("apple1 是" + apple1);
+    console.log("apple2 是" + apple2);
+
+
+    // comfirm() 确认对话框 
+
+    // 点击按钮，实现退出功能
+    $('#btnLogout').on('click', function () {
+
+      // 提示用户是否确认退出
+      layer.confirm('确定退出登录?', { icon: 3, title: '提示' }, function (index) {
+
+        //do something
+        // 1. 清空本地存储中的 token
+        localStorage.removeItem('token')
+
+        // 2. 重新跳转到登录页面
+        location.href = '/login.html'
+
+        // 关闭 confirm 询问框
+        layer.close(index)
+
+      })
+
+    })
+
+  </script>
+
+</body>
+
+</html>

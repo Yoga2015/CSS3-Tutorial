@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS3-字体动态渐变色</title>
+
+  <style>
+    .heading-xhuge {
+      letter-spacing: -.2rem;
+      font-size: 7rem;
+      line-height: .9;
+    }
+
+    .span_gradient-ani {
+      background-image: linear-gradient(-40deg, #ffde66, #ffde66, #6929c4, #8578e6, #18ffc3, #18ffc3) !important;
+      background-size: 300% !important;
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      -webkit-animation: Gradient 30s ease infinite !important;
+      -moz-animation: Gradient 30s ease infinite !important;
+      animation: Gradient 30s ease infinite !important;
+
+      -webkit-text-stroke-width: 0.3px;
+      -webkit-text-stroke-color: rgba(255, 255, 255, .35);
+      line-height: 1;
+    }
+
+    @keyframes Gradient {
+      0% {
+        background-position: 0% 50%;
+      }
+
+      50% {
+        background-position: 100% 50%;
+      }
+
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <h2 class="heading-xhuge">The world's best <br>
+    <span class="span_gradient-ani">AI-powered </span>
+    automatic time tracker
+  </h2>
+</body>
+
+</html>

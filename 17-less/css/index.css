@@ -1,0 +1,90 @@
+/* 基础公共样式： 清除默认样式 + 设置通用样式 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+li {
+  list-style: none;
+}
+body {
+  font: 14px/1.5 Microsoft YaHei, Heiti SC, tahoma, arial, Hiragino Sans GB, "\5B8B\4F53", sans-serif;
+  color: #333;
+}
+a {
+  color: #333;
+  text-decoration: none;
+}
+.banner {
+  position: relative;
+  margin: 100px auto;
+  width: 590px;
+  height: 470px;
+}
+.banner ul {
+  display: flex;
+  width: 590px;
+  height: 470px;
+  overflow: hidden;
+}
+.banner ul li a {
+  display: block;
+  width: 590px;
+  height: 470px;
+}
+.banner .prev,
+.banner .next {
+  position: absolute;
+  /* 有绝对定位，就不用转显示模式了 */
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 30px;
+  font-size: 20px;
+  font-weight: 700;
+  color: #ffffcc;
+  background-color: rgba(0, 0, 0, 0.3);
+  line-height: 30px;
+}
+.banner .prev {
+  left: 0;
+  border-radius: 0 15px 15px 0;
+}
+.banner .next {
+  right: 0;
+  text-align: center;
+  border-radius: 15px 0 0 15px ;
+}
+.banner ol {
+  position: absolute;
+  display: flex;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 20px;
+}
+.banner ol li {
+  margin-left: 8px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+.banner ol li:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.banner ol li i {
+  display: block;
+  margin: 4px;
+  width: 12px;
+  height: 12px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+}
+.banner ol li i:hover {
+  background-color: #fff;
+}
+.banner ol .active {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.banner ol .active i {
+  background-color: #fff;
+}
